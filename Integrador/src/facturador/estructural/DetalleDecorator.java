@@ -2,6 +2,8 @@ package facturador.estructural;
 
 import java.util.*;
 
+import facturador.creacional.ComprobanteElectronico;
+
 /**
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,7 +21,7 @@ public class DetalleDecorator extends ComprobanteElectronico {
     /**
      * @param comprobante
      */
-    public void DetalleDecorator(void comprobante) {
+    public void DetalleDecorator(ComprobanteElectronico comprobante) {
         // TODO implement here
     }
 

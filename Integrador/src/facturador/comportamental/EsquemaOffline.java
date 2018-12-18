@@ -2,6 +2,8 @@ package facturador.comportamental;
 
 import java.util.*;
 
+import facturador.creacional.ComprobanteElectronico;
+
 /**
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -10,28 +12,26 @@ import java.util.*;
  */
 public class EsquemaOffline implements Esquema {
 
+	String codigoAcceso;
     /**
      * Default constructor
      */
-    public EsquemaOffline() {
+	public EsquemaOffline() {
+    	codigoAcceso= Double.toString((int)(Math.random()*150)+1);
     }
 
     /**
      * @param comprobante 
      * @return
      */
-    public void autorizar(void comprobante) {
-        // TODO implement here
-        return null;
-    }
+    
+	@Override
+	public void autorizar(ComprobanteElectronico comprobante) {
+		// TODO Auto-generated method stub
+		comprobante.setNumeroAutorizacion(codigoAcceso);
+		comprobante.setClaveAcceso(codigoAcceso);
+		
+	}
 
-    /**
-     * @param comprobante 
-     * @return
-     */
-    public void autorizar(void comprobante) {
-        // TODO implement here
-        return null;
-    }
 
 }
