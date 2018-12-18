@@ -5,13 +5,14 @@
  */
 package facturador.estructural;
 
+import facturador.comportamental.Esquema;
 import facturador.creacional.ComprobanteElectronico;
 
 /**
  *
  * @author Palacios
  */
-public class AutorizadorSRI {
+public class AutorizadorSRI implements Esquema {
     
     private final Esquema esquema_de_autorizacion;
 

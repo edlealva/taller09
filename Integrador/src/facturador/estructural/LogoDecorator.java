@@ -1,6 +1,6 @@
 package facturador.estructural;
 
-import java.util.*;
+import facturador.creacional.ComprobanteElectronico;
 
 /**
  * To change this license header, choose License Headers in Project Properties.
@@ -8,34 +8,31 @@ import java.util.*;
  * and open the template in the editor.
  * @author Palacios
  */
-public class LogoDecorator extends DetalleDecorator {
+public class LogoDecorator extends DetallesDecorator {
+	
 
-    /**
-     * Default constructor
-     */
-    public LogoDecorator() {
-    }
-
+	private String logo;
     /**
      * @param comprobante
      */
-    public void LogoDecorator(void comprobante) {
-        // TODO implement here
-    }
-
-    /**
-     * 
-     */
-    public void LogoDecorator() {
-        // TODO implement here
-    }
-
-    /**
-     * @return
-     */
-    public Set<String> getDetallesEmisor() {
-        // TODO implement here
-        return null;
-    }
+	public LogoDecorator(ComprobanteElectronico comprobante,String logo) {
+		super(comprobante);
+		this.setLogo(logo);
+		comprobante.getDetallesEmisor().add(logo);
+		
+	}
+	public String getLogo() {
+		return logo;
+	}
+	public void setLogo(String logo) {
+		String s = "";
+		for(String fl:super.getDetallesEmisor()) {
+			if(fl.equals(this.logo)) {
+				s+=fl;
+				fl = logo;
+			}
+		}
+		
+	}
 
 }
