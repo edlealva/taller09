@@ -20,18 +20,11 @@ public class EsquemaOnline implements Esquema {
      * @param comprobante 
      * @return
      */
-    public void autorizar(void comprobante) {
-        // TODO implement here
+    public void autorizar(ComprobanteElectronico comprobante) {
+        comprobante.
         return null;
     }
 
-    /**
-     * @param comprobante 
-     * @return
-     */
-    public void autorizar(void comprobante) {
-        // TODO implement here
-        return null;
-    }
+ 
 
 }
